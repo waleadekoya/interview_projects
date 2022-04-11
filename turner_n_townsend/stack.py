@@ -158,7 +158,7 @@ class Interpreter(Fifth):
     [11-Apr-22 19:27:13] [Turner & Townsend] [INFO] Stack is [34, 45, 56, 67, 33, 72, 72]
 
     Terminal:
-    py src\turner_n_townsend\stack.py --stack 34 45 56 67 3 2 --DUP
+    py src\turner_n_townsend\stack.py --stack 34 45 56 67 3 2 --SWAP
     Output:
     [11-Apr-22 19:23:44] [Turner & Townsend] [INFO] Stack is [12, 34, 23, 45, 34, 56, 45, 67]
     [11-Apr-22 19:23:44] [Turner & Townsend] [INFO] Command: SWAP
