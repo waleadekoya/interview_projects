@@ -105,7 +105,7 @@ class ArgsParse:
         parser = ArgumentParser(prog="Fifth", description="handles commands for Stack data types")
         parser.add_argument("--stack", nargs="+", type=int, help="a data structure containing a stack of integers")
         parser.add_argument("--PUSH", type=int, help="adds the given element to the stack")
-        for command, value in cls.__args_options().items():  # action="store", type=value.get("type")
+        for command, value in cls.__args_options().items():
             parser.add_argument(f"--{command}", help=value.get("help"), action="store_true")
         args = parser.parse_args()
         return args
