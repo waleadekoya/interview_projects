@@ -5,8 +5,8 @@ from typing import Callable, Optional
 
 from utils import logger
 
-
 __author__ = "Wale Adekoya"
+
 
 class StackException(Exception):
     pass
@@ -18,8 +18,7 @@ class Fifth(collections.UserList):
     A stack is a data structure which can only have elements added to the top.
     Fifth stores a stack of integers and supports commands to manipulate that stack.
     Operations always apply to the top of the stack.
-    Fifth supports the following arithmetic operators:
-    + - * /
+    Fifth supports the following arithmetic operators: + - * /
 
     Each of these applies the operator to the two values on the top of the stack
     and pushes the result to the top of the stack.
