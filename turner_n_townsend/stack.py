@@ -138,37 +138,37 @@ class Interpreter(Fifth):
     The result of each command is outputted to the terminal. Handle errors sensibly.
 
     Example:
-    py src\turner_n_townsend\stack.py -help
+    py turner_n_townsend\stack.py -help
 
     Terminal
-    py src\turner_n_townsend\stack.py --stack 12 23 34 45 67 --PUSH 35
+    py turner_n_townsend\stack.py --stack 12 23 34 45 67 --PUSH 35
     [11-Apr-22 19:29:13] [Turner & Townsend] [INFO] Stack is [12, 23, 34, 45, 67]
     [11-Apr-22 19:29:13] [Turner & Townsend] [INFO] PUSH 35
     [11-Apr-22 19:29:13] [Turner & Townsend] [INFO] Stack is [12, 23, 34, 45, 67, 35]
 
     Terminal:
-    py src\turner_n_townsend\stack.py --stack 34 45 56 67 33 72 --POP
+    py turner_n_townsend\stack.py --stack 34 45 56 67 33 72 --POP
     [11-Apr-22 19:28:19] [Turner & Townsend] [INFO] Stack is [34, 45, 56, 67, 33, 72]
     [11-Apr-22 19:28:19] [Turner & Townsend] [INFO] Command: POP
     [11-Apr-22 19:28:19] [Turner & Townsend] [INFO] Stack is [34, 45, 56, 67, 33]
 
 
     Terminal:
-    py src\turner_n_townsend\stack.py  --stack 34 45 56 67 33 72 --DUP
+    py turner_n_townsend\stack.py  --stack 34 45 56 67 33 72 --DUP
     Output:
     [11-Apr-22 19:27:13] [Turner & Townsend] [INFO] Stack is [34, 45, 56, 67, 33, 72]
     [11-Apr-22 19:27:13] [Turner & Townsend] [INFO] Command: DUP
     [11-Apr-22 19:27:13] [Turner & Townsend] [INFO] Stack is [34, 45, 56, 67, 33, 72, 72]
 
     Terminal:
-    py src\turner_n_townsend\stack.py --stack 34 45 56 67 3 2 --SWAP
+    py turner_n_townsend\stack.py --stack 34 45 56 67 3 2 --SWAP
     Output:
     [11-Apr-22 19:23:44] [Turner & Townsend] [INFO] Stack is [12, 34, 23, 45, 34, 56, 45, 67]
     [11-Apr-22 19:23:44] [Turner & Townsend] [INFO] Command: SWAP
     [11-Apr-22 19:23:44] [Turner & Townsend] [INFO] Stack is [12, 34, 23, 45, 34, 56, 67, 45]
 
     Terminal:
-    py src\turner_n_townsend\stack.py --stack  12 23 34 45 67 --ADD
+    py turner_n_townsend\stack.py --stack  12 23 34 45 67 --ADD
     Output:
     [11-Apr-22 19:38:31] [Turner & Townsend] [INFO] Stack is [12, 23, 34, 45, 67]
     [11-Apr-22 19:38:31] [Turner & Townsend] [INFO] ADD
