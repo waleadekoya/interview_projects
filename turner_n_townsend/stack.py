@@ -37,21 +37,21 @@ class Fifth(collections.UserList):
 
     def PUSH(self, item: int) -> None:
         self.append(item)
-        self.log_message(self.PUSH, item)
+        self.__log_message(self.PUSH, item)
 
     def POP(self) -> None:
         self.remove(self.data[-1])
-        self.log_message(self.POP, self.data[-1])
+        self.__log_message(self.POP, self.data[-1])
 
     def SWAP(self) -> None:
         copy = self.data.copy()[-2:]
         self.data[-1] = copy[0]
         self.data[-2] = copy[1]
-        self.log_message(self.SWAP)
+        self.__log_message(self.SWAP)
 
     def DUP(self) -> None:
         self.append(self.data[-1])
-        self.log_message(self.DUP)
+        self.__log_message(self.DUP)
 
     def __error_msg(self, operator: str) -> None:
         if len(self.data[-2:]) == 1:
@@ -76,7 +76,7 @@ class Fifth(collections.UserList):
             self.data = self.data[0:-2] + [value]
         else:
             self.data = [value]
-        self.log_message(func)
+        self.__log_message(func)
 
     def MULTIPLY(self) -> None:
         self.__error_msg("*")
@@ -88,7 +88,11 @@ class Fifth(collections.UserList):
         division: int = reduce(lambda x, y: int(round(x / y, 0)), self.data[-2:])
         self.__get_operation_output(division, self.DIVIDE)
 
-    def log_message(self, command: Callable, item: Optional[int] = None) -> None:
+    def __log_message(
+            self,
+            command: Callable[[int | str | None], int | str | None],
+            item: Optional[int] = None
+    ) -> None:
         if command.__name__ in ["DUP", "SWAP", "POP"]:
             logger.info(f"Command: {command.__name__}")
         elif command.__name__ in ["ADD", "MULTIPLY", "SUBTRACT", "DIVIDE"]:
